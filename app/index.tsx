@@ -2,6 +2,7 @@ import { Box } from "@/components/ui/box";
 import React from "react";
 import { ScrollView } from "react-native";
 import { Image } from "@/components/ui/image";
+import Logo from "@/assets/images/logo.png";
 
 export default function Home() {
   return (
@@ -12,12 +13,9 @@ export default function Home() {
       >
         <Box className="flex flex-auto justify-center items-center">
           <Image
-            source={{
-              uri: "https://github.com/spagnol10.png",
-            }}
-            alt="Logo"
-            size="xl"
-            className="aspect-[320/208] w-full max-w-[320px] "
+            size="2xl"
+            source={Logo}
+            alt="image"
           />
         </Box>
       </ScrollView>
