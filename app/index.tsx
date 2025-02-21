@@ -2,7 +2,6 @@ import { Box } from "@/components/ui/box";
 import React from "react";
 import { ScrollView } from "react-native";
 import { Image } from "@/components/ui/image";
-import Logo from "@/assets/images/logo.png";
 
 export default function Home() {
   return (
@@ -14,7 +13,7 @@ export default function Home() {
         <Box className="flex flex-auto justify-center items-center">
           <Image
             size="2xl"
-            source={Logo}
+            source={require('@/assets/images/logo.png')}
             alt="image"
           />
         </Box>
