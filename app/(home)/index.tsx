@@ -1,9 +1,7 @@
 import { Box } from "@/components/ui/box";
 import { Button, ButtonIcon } from "@/components/ui/button";
 import { ArrowLeftIcon } from "@/components/ui/icon";
-import { Image } from "@/components/ui/image";
-import { Text } from "@/components/ui/text";
-import { Link, router } from "expo-router";
+import { router } from "expo-router";
 import React from "react";
 import { View } from "react-native";
 

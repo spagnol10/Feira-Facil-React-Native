@@ -19,7 +19,7 @@ export default function ScreenTwo() {
         />
       </Box>
       <Box className="flex-1 flex-auto justify-center items-center">
-        <Text className="color-black font-bold text-center mt-4" size="2xl">
+      <Text className="color-black font-bold text-left mt-4" size="2xl">
           Historico de vendas
         </Text>
       </Box>

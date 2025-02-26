@@ -19,18 +19,18 @@ export default function ScreenOne() {
         />
       </Box>
       <Box className="flex-1 flex-auto justify-center items-center">
-        <Text className="color-black font-bold text-center mt-4" size="2xl">
+        <Text className="color-black font-bold text-left mt-4" size="2xl">
           Voce mais perto das feiras da sua cidade.
         </Text>
       </Box>
       <Box className="flex-1 flex-auto justify-center items-end mr-5">
         <Pressable>
           <Button
-            size="lg"
-            className="rounded-full p-3.5"
+            size="xl"
+            className="rounded-full p-8"
             onPress={() => router.push("/screenTwo")}
           >
-            <ButtonIcon as={ArrowRightIcon} />
+            <ButtonIcon size="xl" as={ArrowRightIcon} />
           </Button>
         </Pressable>
       </Box>

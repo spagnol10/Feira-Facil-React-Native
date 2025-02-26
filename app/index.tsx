@@ -7,7 +7,7 @@ import { View } from "react-native";
 
 export default function Home() {
   return (
-    <View className="flex-1" style={{ backgroundColor: "#1B755E" }}>
+    <View className="flex-1 bg-white">
       <Box className="flex flex-auto justify-center items-center">
         <Image
           size="2xl"
@@ -15,7 +15,7 @@ export default function Home() {
           alt="Logo-FeiraFacil"
         />
         <Link href={"/(apresentation)/screenOne"}>
-          <Text className="color-white font-bold text-center mt-4" size="4xl">
+          <Text className="color-green-900 font-bold text-center mt-4" size="4xl">
             Feira Fácil
           </Text>
         </Link>
