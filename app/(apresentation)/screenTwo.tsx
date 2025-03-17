@@ -5,42 +5,42 @@ import { Image } from "@/components/ui/image";
 import { Text } from "@/components/ui/text";
 import { Link, router } from "expo-router";
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Pressable } from "react-native";
 
 export default function ScreenTwo() {
   return (
     <View className="flex-1 mt-10 bg-white">
       <Box className="flex flex-auto justify-end items-center">
         <Image
-          className="w-full"
+          className="w-100 h-100"
           size="2xl"
-          source={require("@/assets/images/ThemeOne.png")}
+          source={require("@/assets/images/ThemeTwo.png")}
           alt="Logo-FeiraFacil"
         />
       </Box>
-      <Box className="flex-1 flex-auto justify-center items-center">
-      <Text className="color-black font-bold text-left mt-4" size="2xl">
-          Historico de vendas
+      <Box className="flex-1 justify-center items-start p-4">
+        <Text className="color-black font-bold text-left mt-4 p-2" size="5xl">
+          Seamless Stock Control
+        </Text>
+        <Text className="color-black font-thin items-start p-2" size="4xl">
+          Real-Time Inventory
         </Text>
       </Box>
-      <Box className="flex-1 flex-auto justify-center items-end mr-5">
-        <Link href={"/(apresentation)/screenThree"}>
+      <Box className="flex-1 justify-center items-end mr-5">
+        <Pressable>
           <Button
+            style={{ backgroundColor: "#252525" }}
             size="lg"
             className="rounded-full p-3.5"
             onPress={() => router.push("/screenThree")}
           >
-            <ButtonIcon as={ArrowRightIcon} />
+            <ButtonIcon
+              color="white"
+              size="lg"
+              as={ArrowRightIcon} />
           </Button>
-        </Link>
+        </Pressable>
       </Box>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: 10,
-  },
-});

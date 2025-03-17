@@ -12,25 +12,32 @@ export default function ScreenOne() {
     <View className="flex-1 mt-10 bg-white">
       <Box className="flex flex-auto justify-end items-center">
         <Image
-          className="w-full"
+          className="w-100 h-100"
           size="2xl"
           source={require("@/assets/images/ThemeOne.png")}
           alt="Logo-FeiraFacil"
         />
       </Box>
-      <Box className="flex-1 flex-auto justify-center items-center">
-        <Text className="color-black font-bold text-left mt-4" size="2xl">
-          Voce mais perto das feiras da sua cidade.
+      <Box className="flex-1 justify-center items-start p-4">
+        <Text className="color-black font-bold text-left mt-4 p-2" size="5xl">
+          Total Transaction Control
+        </Text>
+        <Text className="color-black font-thin items-start p-2" size="4xl">
+          Effortless Sales
         </Text>
       </Box>
-      <Box className="flex-1 flex-auto justify-center items-end mr-5">
+      <Box className="flex-1 justify-center items-end mr-5">
         <Pressable>
           <Button
-            size="xl"
-            className="rounded-full p-8"
+            style={{ backgroundColor: "#252525" }}
+            size="lg"
+            className="rounded-full p-3.5"
             onPress={() => router.push("/screenTwo")}
           >
-            <ButtonIcon size="xl" as={ArrowRightIcon} />
+            <ButtonIcon
+              color="white"
+              size="lg"
+              as={ArrowRightIcon} />
           </Button>
         </Pressable>
       </Box>
