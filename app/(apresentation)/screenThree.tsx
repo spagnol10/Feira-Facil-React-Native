@@ -33,7 +33,7 @@ export default function ScreenThree() {
             style={{ backgroundColor: "#252525" }}
             size="lg"
             className="rounded-full p-3.5"
-            onPress={() => router.push("/(home)")}
+            onPress={() => router.push("/(login)")}
           >
             <ButtonIcon
               color="white"
