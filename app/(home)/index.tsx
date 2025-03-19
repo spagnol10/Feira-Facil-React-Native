@@ -7,6 +7,9 @@ import { Input } from "@/components/ui/input";
 import { Text } from "@/components/ui/text";
 import React from "react";
 import { View } from "react-native";
+import { Tabs } from "expo-router";
+import { useClientOnlyValue } from "@/components/useClientOnlyValue";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 
 // Dados dos produtos
 const products = [
@@ -14,6 +17,13 @@ const products = [
   { id: 2, name: "Cenoura", price: "R$ 19,99", image: require("@/assets/images/Frutas.png") },
   { id: 3, name: "Banana", price: "R$ 12,99", image: require("@/assets/images/Frutas.png") },
 ];
+
+function TabBarIcon(props: {
+  name: React.ComponentProps<typeof FontAwesome>["name"];
+  color: string;
+}) {
+  return <FontAwesome size={18} style={{ marginBottom: -3 }} {...props} />;
+}
 
 export default function Home() {
   return (
@@ -67,7 +77,7 @@ export default function Home() {
         </Card>
       </Box>
 
-      <Box className="flex justify-center items-center p-4 bg-slate-500">
+      <Box className="flex justify-center items-center p-4">
         <Input className="w-full">
           <Icon as={SearchIcon} className="text-typography-500 w-6 h-6" />
         </Input>
@@ -91,9 +101,8 @@ export default function Home() {
             key={product.id}
             size="md"
             variant="elevated"
-            className="m-2 w-40 h-100"
+            className="m-2 w-40 h-100 bg-neutral-100"
             style={{
-              backgroundColor: "#00D361",
               flexDirection: "column",
               alignItems: "flex-start",
               padding: 16,
@@ -119,6 +128,15 @@ export default function Home() {
         ))}
       </Box>
 
+      <Tabs>
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: "Expo V3",
+            tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          }}
+        />
+      </Tabs>
     </View>
   );
 }

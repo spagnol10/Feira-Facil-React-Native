@@ -17,6 +17,7 @@ export default function Login() {
     console.log("Email:", email);
     console.log("Password:", password);
     // Aqui você pode fazer a chamada para a API ou outra ação necessária
+    router.push("/(home)");
   };
 
   return (
